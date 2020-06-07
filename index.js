@@ -1,4 +1,5 @@
 const categoryBackend = "https://localhost:3000/api/v1/categories"
+const questionBackend = "https://localhost:3000/api/v1/questions"
 
 document.addEventListener('DOMContentLoaded', () => { 
     getCategories() 
