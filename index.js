@@ -8,6 +8,14 @@ function getCategories() {
     fetch(categoryBackend) 
     .then(response => response.json()) 
     .then(categories => { 
-        console.log(categories)
+        categories.data.forEach(category => {
+          const categoryMarkup =  
+            <div class="categories"> 
+                <button> ${category.attributes.name} </button>
+            </div>
+            <br> </br>;
+
+            document.querySelector('#categories-container').innerHTML += categoryMarkup 
+        })
     }) 
 }
