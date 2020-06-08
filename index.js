@@ -1,12 +1,33 @@
-const categoryBackend = "https://localhost:3000/api/v1/categories"
-const questionBackend = "https://localhost:3000/api/v1/questions"
+const categories = "https://localhost:3000/api/v1/categories"
+const questions = "https://localhost:3000/api/v1/questions"
 
 document.addEventListener('DOMContentLoaded', () => { 
     getCategories() 
 })
 
 function getCategories() { 
-    fetch(categoryBackend) 
+    fetch(categories) 
+    .then(response => response.json()) 
+    .then(categories => { 
+        categories.data.forEach(category => {
+          const categoryMarkup =  
+            <div class="categories"> 
+                <button> ${category.attributes.name} </button>
+            </div>
+            <br> </br>;
+
+            document.querySelector('#categories-container').innerHTML += categoryMarkup 
+        })
+    }) 
+}
+
+function postFetch(name) { 
+    const categoryName = {name} 
+    fetch(categories, { 
+        method: "POST", 
+        headers: {"Content-Type": "application/json"} 
+        body: JSON.stringify(categories) 
+    })
     .then(response => response.json()) 
     .then(categories => { 
         categories.data.forEach(category => {
