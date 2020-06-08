@@ -10,15 +10,19 @@ function getCategories() {
     .then(response => response.json()) 
     .then(categories => { 
         categories.data.forEach(category => {
-          const categoryMarkup =  
+          render(category)
+        })
+    }) 
+}
+
+function render(category) { 
+    const categoryMarkup =  
             <div class="categories"> 
                 <button> ${category.attributes.name} </button>
             </div>
             <br> </br>;
 
             document.querySelector('#categories-container').innerHTML += categoryMarkup 
-        })
-    }) 
 }
 
 function postFetch(name) { 
@@ -31,13 +35,7 @@ function postFetch(name) {
     .then(response => response.json()) 
     .then(categories => { 
         categories.data.forEach(category => {
-          const categoryMarkup =  
-            <div class="categories"> 
-                <button> ${category.attributes.name} </button>
-            </div>
-            <br> </br>;
-
-            document.querySelector('#categories-container').innerHTML += categoryMarkup 
+          render(category)
         })
     }) 
 }
