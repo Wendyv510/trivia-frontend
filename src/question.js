@@ -1,7 +1,8 @@
 class Question { 
-    constructor(description, answer, category_id) { 
-        this.description = description, 
-        this.answer = answer, 
-        this.category_id = category_id 
+    constructor(question, questionAttributes) { 
+        this.id = question.id
+        this.description = questionAttributes.description 
+        this.answer = questionAttributes.answer 
+        this.category_id = questionAttributes.category_id 
     }
 }
