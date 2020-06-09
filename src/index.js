@@ -35,7 +35,7 @@ function postFetch(name) {
     .then(response => response.json()) 
     .then(categories => { 
         categories.data.forEach(category => {
-          render(category)
+          render(category.attributes.name)
         })
     }) 
 }
