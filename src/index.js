@@ -17,7 +17,7 @@ function getCategories() {
 
 function render(category) { 
     const categoryMarkup =  
-            <div class="categories"> 
+            <div data-id="${category.id}"> 
                 <button> ${category.attributes.name} </button>
             </div>
             <br> </br>;
