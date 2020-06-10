@@ -4,7 +4,7 @@ class Category {
         this.name = categoryAttributes.name 
     }
 
-  function renderCategory() {
+   renderCategory() {
       return  
         <div data-id = "${this.id}">
             <button data-id = "${this.id}"> "${this.name}" </button>

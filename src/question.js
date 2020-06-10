@@ -6,7 +6,7 @@ class Question {
         this.category_id = questionAttributes.category_id 
     }
 
-    function renderCategory() {
+     renderCategory() {
         return  
           <div data-id = "${this.id}">
               <h1> ${this.description} </h1>
