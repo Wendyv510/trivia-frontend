@@ -4,13 +4,15 @@ class Category {
         this.name = categoryAttributes.name 
     }
 
-  renderCategory() {
+  function renderCategory() {
       return  
         <div data-id = "${this.id}">
             <button data-id = "${this.id}"> "${this.name}" </button>
         </div> 
   }  
 }
+
+Category.all = [] 
 
 
 
