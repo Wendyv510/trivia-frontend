@@ -3,13 +3,31 @@
 <head>
   <meta charset="UTF-8">
   <title>Trivia</title>
+  <link rel="stylesheet"  href="styles.css">
 </head>
 <body>
-    <img src ="https://www.salidalibrary.org/wp-content/uploads/2018/12/trivia.png">
-  
-    <div id="category-container"> 
-
+    
+  <div class="quiz-wrapper">       
+    <div id="questionBox" class="question">
+        Sample Question
     </div>
+    <div class="options">
+        <ul id="ul">
+            <li id="opt1" onclick="button(this)"></li>
+            <li id="opt2" onclick="button(this)"></li>
+        </ul>
+    </div>
+    <div class="score">
+        <div class="next">
+            <button id="btnNext" type="button" onclick="next()">
+              Next
+            </button>
+        </div>
+        <div class="score-card">
+            SCORE: <span id="scoreCard">0</span>
+        </div>
+    </div>
+</div>
     
   <script type="application/json" src="src/question.js"></script>
   <script type="application/json" src="src/category.js"></script>
