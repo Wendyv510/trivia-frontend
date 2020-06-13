@@ -1,23 +1,22 @@
 const categories = "https://localhost:3000/api/v1/categories"
 const questions = "https://localhost:3000/api/v1/questions"
 
-document.addEventListener('DOMContentLoaded', () => { 
-    getCategories() 
-})
+document.addEventListener('DOMContentLoaded', getCategories) 
 
 function getCategories() { 
     fetch(categories) 
     .then(response => response.json()) 
     .then(categories => { 
         categories.data.forEach(category => {
-          render(category)
+          render(category.name)
         })
     }) 
 }
 
 function render(category) { 
     const categoryMarkup =  
-            <div data-id="${category.id}"> 
+            <div data-id="${category.id}">
+                <h1> Choose a Category </h1> 
                 <button> ${category.attributes.name} </button>
             </div>
             <br> </br>;
