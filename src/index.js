@@ -9,7 +9,10 @@ const getCategories = () => {
     .then(json => json.forEach(category => renderCategory(category.name) 
 }
 
-const renderCategory = (category) => { 
+const renderCategory = (category) => {
+    
+
+}
     
 
 function postFetch(name) { 
@@ -22,4 +25,15 @@ function postFetch(name) {
     .then(response => response.json()) 
     .then(json => json.forEach(category => renderCategory(category.attributes.name)
     }) 
+}
+
+
+const getQuestions = () => { 
+    fetch(questions) 
+    .then(response => response.json()) 
+    .then(json => json.forEach(question =>             ))
+}
+
+const renderQuestion = () => { 
+    
 }
