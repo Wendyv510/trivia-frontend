@@ -10,15 +10,7 @@ const getCategories = () => {
 }
 
 const renderCategory = (category) => { 
-    const categoryMarkup =  
-            <div data-id="${category.id}">
-                <h1> Choose a Category </h1> 
-                <button> ${category.attributes.name} </button>
-            </div>
-            <br> </br>;
-
-            document.querySelector('#quiz-wrapper').innerHTML += categoryMarkup 
-}
+    
 
 function postFetch(name) { 
     const categoryName = {name} 
