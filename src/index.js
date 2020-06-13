@@ -1,19 +1,15 @@
 const categories = "https://localhost:3000/api/v1/categories"
 const questions = "https://localhost:3000/api/v1/questions"
 
-document.addEventListener('DOMContentLoaded', getCategories) 
+document.addEventListener('DOMContentLoaded', () => getCategories()) 
 
-function getCategories() { 
+const getCategories = () => { 
     fetch(categories) 
     .then(response => response.json()) 
-    .then(categories => { 
-        categories.data.forEach(category => {
-          render(category.name)
-        })
-    }) 
+    .then(json => json.forEach(category => renderCategory(category.name) 
 }
 
-function render(category) { 
+const renderCategory = (category) => { 
     const categoryMarkup =  
             <div data-id="${category.id}">
                 <h1> Choose a Category </h1> 
@@ -21,7 +17,7 @@ function render(category) {
             </div>
             <br> </br>;
 
-            document.querySelector('#categories-container').innerHTML += categoryMarkup 
+            document.querySelector('#quiz-wrapper').innerHTML += categoryMarkup 
 }
 
 function postFetch(name) { 
@@ -32,9 +28,6 @@ function postFetch(name) {
         body: JSON.stringify(categories) 
     })
     .then(response => response.json()) 
-    .then(categories => { 
-        categories.data.forEach(category => {
-          render(category.attributes.name)
-        })
+    .then(json => json.forEach(category => renderCategory(category.attributes.name)
     }) 
 }
