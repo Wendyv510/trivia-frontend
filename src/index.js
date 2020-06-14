@@ -29,9 +29,11 @@ const getQuestions = () => {
 }
 
 const renderQuestion = () => { 
+    let score = 0 
+    document.querySelector.(`span[id="score-card]`)
+    for (let i = 0; i < questions.length; i++) {
     document.querySelector(`div[id="question-box]`)
-    document.innerHTML = "${question.description}" 
-       for (let i = 0; i < questions.length; i++) { 
+    document.innerHTML = "${question.description}"   
            document.querySelector(`div[class="options]`)
            document.querySelector(`ul[id="ul"]`)
            button.querySelector(`li[id="opt1"]`)
@@ -43,9 +45,11 @@ const renderQuestion = () => {
             button.querySelector(`li[id="opt2"]`)
             button.innerHTML = "${questions.answer}"
               button.addEventListener("onclick", function(e)) { 
-                  e.preventDefault() 
+                  e.preventDefault(); 
+                  score ++; 
                   alert "Correct" 
-              }     
+              }  
+         return score   
        }
 
 }

@@ -8,6 +8,10 @@ body{
     box-sizing: border-box;
 }
 
+.h1{
+    color: white  
+}
+
 .quiz-wrapper{
     height: 400px;
     width: 600px;

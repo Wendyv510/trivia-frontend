@@ -3,6 +3,7 @@ class Question {
         this.id = question.id
         this.description = questionAttributes.description 
         this.answer = questionAttributes.answer 
+        this.option = questionAttributes.option 
         this.category_id = questionAttributes.category_id 
     }
 
@@ -10,6 +11,7 @@ class Question {
         return  
           <div data-id = "${this.id}">
               <h1> ${this.description} </h1>
+              <button> ${this.option} </button>
               <button> ${this.answer} </button>
           </div> 
     }  
