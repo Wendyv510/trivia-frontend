@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => getCategories())
 const getCategories = () => { 
     fetch(categories) 
     .then(response => response.json()) 
-    .then(json => json.forEach(category => renderCategory(category.name) 
+    .then(json => json.forEach(category => renderCategory(category.name))) 
 }
 
 const renderCategory = (category) => { 
