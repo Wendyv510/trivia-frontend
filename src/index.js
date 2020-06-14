@@ -17,24 +17,31 @@ const renderCategory = (category) => {
     fetch(categories) 
     .then(response => response.json()) 
     .then(json => json.forEach(category => renderCategory(this.name)
-     
-}
 }
     
 
-const getQuestions = () => { 
+const getQuestions = () => {
+
     fetch(questions) 
     .then(response => response.json()) 
     .then(json => json.forEach(question =>  renderQuestion(question.description)          ))
 }
 
 const renderQuestion = () => { 
+        method: "POST", 
+        headers: {"Content-Type": "application/json"} 
+        body: JSON.stringify(questions) 
+    
+    fetch(questions) 
+    .then(response => response.json()) 
+    .then(json => json.forEach(question => renderQuestion(this.description, this.Option, this.answer)
+    
     let score = 0 
-    document.querySelector.(`span[id="score-card]`)
+    document.querySelector.(`span[id="score-card"]`)
     for (let i = 0; i < questions.length; i++) {
-    document.querySelector(`div[id="question-box]`)
+    document.querySelector(`div[id="question-box"]`)
     document.innerHTML = "this.description"   
-           document.querySelector(`div[class="options]`)
+           document.querySelector(`div[class="options"]`)
            document.querySelector(`ul[id="ul"]`)
            button.querySelector(`li[id="opt1"]`)
            button.innerHTML = "this.option"
