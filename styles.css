@@ -8,8 +8,12 @@ body{
     box-sizing: border-box;
 }
 
-.h1{
-    color: white  
+img { 
+    height: 200px;
+    width: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .quiz-wrapper{

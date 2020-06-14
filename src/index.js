@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => getCategories())
 const getCategories = () => { 
     fetch(categories) 
     .then(response => response.json()) 
-    .then(json => json.forEach(category => renderCategory(category.name))) 
+    .then(json => json.forEach(category => renderCategory) 
 }
 
 const renderCategory = (category) => { 
@@ -16,7 +16,7 @@ const renderCategory = (category) => {
     
     fetch(categories) 
     .then(response => response.json()) 
-    .then(json => json.forEach(category => renderCategory(category.attributes.name)
+    .then(json => json.forEach(category => renderCategory(this.name)
      
 }
 }
@@ -33,17 +33,17 @@ const renderQuestion = () => {
     document.querySelector.(`span[id="score-card]`)
     for (let i = 0; i < questions.length; i++) {
     document.querySelector(`div[id="question-box]`)
-    document.innerHTML = "${question.description}"   
+    document.innerHTML = "this.description"   
            document.querySelector(`div[class="options]`)
            document.querySelector(`ul[id="ul"]`)
            button.querySelector(`li[id="opt1"]`)
-           button.innerHTML = "${questions.option}"
+           button.innerHTML = "this.option"
               button.addEventListener("onclick", function(e)) {
                   e.preventDefault() 
                   alert "Incorrect" 
               } 
             button.querySelector(`li[id="opt2"]`)
-            button.innerHTML = "${questions.answer}"
+            button.innerHTML = "this.answer"
               button.addEventListener("onclick", function(e)) { 
                   e.preventDefault(); 
                   score ++; 

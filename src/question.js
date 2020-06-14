@@ -6,15 +6,6 @@ class Question {
         this.option = questionAttributes.option 
         this.category_id = questionAttributes.category_id 
     }
-
-     renderCategory() {
-        return  
-          <div data-id = "${this.id}">
-              <h1> ${this.description} </h1>
-              <button> ${this.option} </button>
-              <button> ${this.answer} </button>
-          </div> 
-    }  
 }
 
 Question.all = [] 

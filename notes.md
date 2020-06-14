@@ -15,7 +15,27 @@ const categoryMarkup =
                 <button> ${category.attributes.name} </button>
             </div>
             <br> </br>;
-
-            document.querySelector('#quiz-wrapper').innerHTML += categoryMarkup 
+             document.querySelector('#quiz-wrapper').innerHTML += categoryMarkup 
 }
+
+
+-- in classes render 
+
+ renderCategory() {
+        return  
+          <div data-id = "${this.id}">
+              <h1> ${this.description} </h1>
+              <button> ${this.option} </button>
+              <button> ${this.answer} </button>
+          </div> 
+    }  
+
+
+renderCategory() {
+      return  
+        <div data-id = "${this.id}">
+            <button data-id = "${this.id}"> "${this.name}" </button>
+        </div> 
+  }  
+           
   
