@@ -9,31 +9,43 @@ const getCategories = () => {
     .then(json => json.forEach(category => renderCategory(category.name) 
 }
 
-const renderCategory = (category) => {
-    
-
-}
-    
-
-function postFetch(name) { 
-    const categoryName = {name} 
-    fetch(categories, { 
+const renderCategory = (category) => { 
         method: "POST", 
         headers: {"Content-Type": "application/json"} 
         body: JSON.stringify(categories) 
-    })
+    
+    fetch(categories) 
     .then(response => response.json()) 
     .then(json => json.forEach(category => renderCategory(category.attributes.name)
-    }) 
+     
 }
-
+}
+    
 
 const getQuestions = () => { 
     fetch(questions) 
     .then(response => response.json()) 
-    .then(json => json.forEach(question =>             ))
+    .then(json => json.forEach(question =>  renderQuestion(question.description)          ))
 }
 
 const renderQuestion = () => { 
-    
+    document.querySelector(`div[id="question-box]`)
+    document.innerHTML = "${question.description}" 
+       for (let i = 0; i < questions.length; i++) { 
+           document.querySelector(`div[class="options]`)
+           document.querySelector(`ul[id="ul"]`)
+           button.querySelector(`li[id="opt1"]`)
+           button.innerHTML = "${questions.option}"
+              button.addEventListener("onclick", function(e)) {
+                  e.preventDefault() 
+                  alert "Incorrect" 
+              } 
+            button.querySelector(`li[id="opt2"]`)
+            button.innerHTML = "${questions.answer}"
+              button.addEventListener("onclick", function(e)) { 
+                  e.preventDefault() 
+                  alert "Correct" 
+              }     
+       }
+
 }
