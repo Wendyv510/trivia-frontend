@@ -1,7 +1,7 @@
 const categories = "https://localhost:3000/api/v1/categories"
 const questions = "https://localhost:3000/api/v1/questions"
 
-document.addEventListener('DOMContentLoaded', () => getCategories()) 
+document.addEventListener('DOMContentLoaded', () => getCategories(categories)) 
 
 const getCategories = () => { 
     fetch(categories) 
