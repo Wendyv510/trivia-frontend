@@ -1,9 +1,20 @@
+function getCategories() { 
+    fetch("https://localhost:3000/api/v1/categories") 
+    .then(response => response.json()) 
+    .then(data => console.log(JSON.stringify(data))) 
+}
+
+
+
+
 const categories = "https://localhost:3000/api/v1/categories"
 const questions = "https://localhost:3000/api/v1/questions"
 
-document.addEventListener('DOMContentLoaded', () => getCategories(categories)) 
+document.addEventListener('DOMContentLoaded', () => {
+    getCategories(categories)
+}) 
 
-function getCategories = () => { 
+function getCategories(){ 
     fetch(categories) 
     .then(response => response.json()) 
     .then(data => console.log(JSON.stringify(data))) 
