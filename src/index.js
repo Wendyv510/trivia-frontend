@@ -3,10 +3,10 @@ const questions = "https://localhost:3000/api/v1/questions"
 
 document.addEventListener('DOMContentLoaded', () => getCategories(categories)) 
 
-const getCategories = () => { 
+function getCategories = () => { 
     fetch(categories) 
     .then(response => response.json()) 
-    .then(json => json.forEach(category => renderCategory(category)) 
+    .then(data => console.log(JSON.stringify(data))) 
 }
 
 const renderCategory = (category) => { 
