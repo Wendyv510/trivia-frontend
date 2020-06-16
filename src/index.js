@@ -2,9 +2,8 @@
 const categories = "https://localhost:3000/api/v1/categories"
 const questions = "https://localhost:3000/api/v1/questions"
 
-document.addEventListener('DOMContentLoaded', () => {
-    getCategories(categories)
-}) 
+document.addEventListener('DOMContentLoaded', () => 
+    getCategories()) 
 
 function getCategories(){ 
     fetch(categories) 
@@ -12,15 +11,24 @@ function getCategories(){
     .then(data => console.log(JSON.stringify(data))) 
 }
 
-const renderCategory = (category) => { 
+function renderCategories = (categories) => { 
         method: "POST", 
-        headers: {"Content-Type": "application/json"} 
+        headers: {"Content-Type": "application/json"}, 
         body: JSON.stringify(categories) 
     
     fetch(categories) 
     .then(response => response.json()) 
     .then(json => json.forEach(category => renderCategory(this.name)))
+
+    let choose = document.querySelector(`div."question-box"`)
+    choose.innerHTML = "Choose a Category" 
+    let category1 = document.querySelector(`li."opt1"`)
+    category1.innerHTML = "${category[1].name}" 
+    let category2 = document.querySelector(`li."opt2"`)
+    category2.innerHTML = "${category[2].name}"
 }
+
+
     
 
 const getQuestions = () => {
@@ -42,8 +50,8 @@ const renderQuestion = () => {
     let score = 0 
     document.querySelector.(`span[id="score-card"]`)
     for (let i = 0; i < questions.length; i++) {
-    document.querySelector(`div[id="question-box"]`)
-    document.innerHTML = "this.description"   
+    let question = document.querySelector(`div."question-box"`)
+    question.innerHTML = "this.description"   
            document.querySelector(`div[class="options"]`)
            document.querySelector(`ul[id="ul"]`)
            button.querySelector(`li[id="opt1"]`)
