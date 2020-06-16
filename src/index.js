@@ -1,4 +1,4 @@
-
+ 
 const categories = "https://localhost:3000/api/v1/categories"
 const questions = "https://localhost:3000/api/v1/questions"
 
