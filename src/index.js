@@ -11,9 +11,12 @@ function getCategories(){
     .then(data => console.log(JSON.stringify(data))) 
 }
 
-function renderCategories = (categories) => { 
+function renderCategories(categories) { 
         method: "POST", 
-        headers: {"Content-Type": "application/json"}, 
+        headers: {
+            "Content-Type": "application/json",
+            "Accept": "application/json" 
+        },  
         body: JSON.stringify(categories) 
     
     fetch(categories) 
