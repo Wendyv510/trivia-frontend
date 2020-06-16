@@ -58,19 +58,19 @@ function renderQuestion = () => {
     let question = document.querySelector("div.question-box")
     question.innerHTML = "this.description"   
     let opt1 = document.querySelector("li.opt1")
-           button.innerHTML = "this.option"
-              button.addEventListener("onclick", function(e)) {
-                  e.preventDefault() 
-                  alert "Incorrect" 
-              } 
-            button.querySelector(`li[id="opt2"]`)
-            button.innerHTML = "this.answer"
-              button.addEventListener("onclick", function(e)) { 
-                  e.preventDefault(); 
-                  score ++; 
-                  alert "Correct" 
-              }  
-         return score   
-       }
+    opt1.innerHTML = "this.option"
+    opt1.addEventListener("onclick", function(e)) {
+        e.preventDefault() 
+        alert "Incorrect" 
+    } 
+    opt2.querySelector("li.opt2")
+    opt2.innerHTML = "this.answer"
+    opt2.addEventListener("onclick", function(e)) { 
+        e.preventDefault(); 
+        score ++; 
+        alert "Correct" 
+    }  
+        return score   
+  }
 
 }
