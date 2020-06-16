@@ -20,41 +20,41 @@ function renderCategories = (categories) => {
     .then(response => response.json()) 
     .then(json => json.forEach(category => renderCategory(this.name)))
 
-    let choose = document.querySelector(`div."question-box"`)
+    let choose = document.querySelector("div.question-box")
     choose.innerHTML = "Choose a Category" 
-    let category1 = document.querySelector(`li."opt1"`)
+    let category1 = document.querySelector("li.opt1")
     category1.innerHTML = "${category[1].name}" 
-    let category2 = document.querySelector(`li."opt2"`)
+    let category2 = document.querySelector("li.opt2")
     category2.innerHTML = "${category[2].name}"
+
+    category.questions.forEach(question => renderQuestion(question))
 }
 
 
     
 
-const getQuestions = () => {
+function getQuestions = () => {
 
     fetch(questions) 
     .then(response => response.json()) 
     .then(json => json.forEach(question =>  renderQuestion(question.description)          ))
 }
 
-const renderQuestion = () => { 
+function renderQuestion = () => { 
         method: "POST", 
         headers: {"Content-Type": "application/json"} 
         body: JSON.stringify(questions) 
     
     fetch(questions) 
     .then(response => response.json()) 
-    .then(json => json.forEach(question => renderQuestion(this.description, this.Option, this.answer)
+    .then(json => json.forEach(question => renderQuestion(this.description, this.option, this.answer)
     
     let score = 0 
-    document.querySelector.(`span[id="score-card"]`)
+    document.querySelector("span.score-card")
     for (let i = 0; i < questions.length; i++) {
-    let question = document.querySelector(`div."question-box"`)
+    let question = document.querySelector("div.question-box")
     question.innerHTML = "this.description"   
-           document.querySelector(`div[class="options"]`)
-           document.querySelector(`ul[id="ul"]`)
-           button.querySelector(`li[id="opt1"]`)
+    let opt1 = document.querySelector("li.opt1")
            button.innerHTML = "this.option"
               button.addEventListener("onclick", function(e)) {
                   e.preventDefault() 
