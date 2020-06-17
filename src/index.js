@@ -2,8 +2,9 @@
 const categories = "https://localhost:3000/api/v1/categories"
 const questions = "https://localhost:3000/api/v1/questions"
 
-document.addEventListener('DOMContentLoaded', () => 
-    getCategories()) 
+document.addEventListener('DOMContentLoaded', () { 
+    getCategories()
+}) 
 
 function getCategories(){ 
     fetch(categories) 
@@ -12,11 +13,11 @@ function getCategories(){
 }
 
 function renderCategories(categories) { 
-        method: "POST", 
+        method: "POST"; 
         headers: {
-            "Content-Type": "application/json",
+            "Content-Type": "application/json";
             "Accept": "application/json" 
-        },  
+        };  
         body: JSON.stringify(categories) 
     
     fetch(categories) 
