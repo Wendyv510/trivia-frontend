@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
 function getCategories(){ 
     fetch(categories) 
     .then(response => response.json()) 
-    .then(data => console.log(JSON.stringify(data))) 
+    .then(data => renderCategories(categories)) 
 }
 
 function renderCategories(categories) { 
@@ -22,18 +22,17 @@ function renderCategories(categories) {
     
     fetch(categories) 
     .then(response => response.json()) 
-    .then(json => json.forEach(category => renderCategory(this.name)))
+    .then(json => json.forEach(category => {
 
-    let choose = document.querySelector("div.question-box")
+    let choose = document.getElementById("question-box")
     choose.innerHTML = "Choose a Category" 
     let category1 = document.querySelector("li.opt1")
     category1.innerHTML = "${category[1].name}" 
     let category2 = document.querySelector("li.opt2")
     category2.innerHTML = "${category[2].name}"
 
-    category.questions.forEach(question => renderQuestion(question))
-}
-
+    category.questions.forEach(question => renderQuestions(question))
+}));
 
     
 
@@ -41,10 +40,10 @@ function getQuestions() {
 
     fetch(questions) 
     .then(response => response.json()) 
-    .then(json => json.forEach(question =>  renderQuestion(question.description)          ))
+    .then(json => json.forEach(question =>  renderQuestions(question.description)          ))
 }
 
-function renderQuestion() { 
+function renderQuestions() { 
         method: "POST", 
         headers; {"Content-Type"; "application/json"} 
         body: JSON.stringify(questions) 
@@ -74,4 +73,4 @@ function renderQuestion() {
         return score   
   }
 
-}
+}}
