@@ -22,7 +22,7 @@ function renderCategories(categories) {
     
     fetch(categories) 
     .then(response => response.json()) 
-    .then(json => json.forEach(category => {
+    .then(data => data.forEach(category => {
 
     let choose = document.getElementById("question-box")
     choose.innerHTML = "Choose a Category" 
