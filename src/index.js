@@ -9,30 +9,29 @@ document.addEventListener('DOMContentLoaded', () => {
 function getCategories(){ 
     fetch(categories) 
     .then(response => response.json()) 
-    .then(data => renderCategories(categories)) 
+    .then(json => {
+        for (const element of json.data) {
+            renderCategory(element);
+          }
+    }) 
 }
 
-function renderCategories(categories) { 
-        method: "POST"; 
-        headers: {
-            "Content-Type"; "application/json";
-            "Accept"; "application/json" 
-        };  
-        body: JSON.stringify(categories) 
-    
-    fetch(categories) 
-    .then(response => response.json()) 
-    .then(data => data.forEach(category => {
+function renderCategory(category) { 
+    console.log(category)
+    //categories.forEach(category => console.log(category))
+}
+        // data.forEach(category => {
 
-    let choose = document.getElementById("question-box")
-    choose.innerHTML = "Choose a Category" 
-    let category1 = document.querySelector("li.opt1")
-    category1.innerHTML = "${category[1].name}" 
-    let category2 = document.querySelector("li.opt2")
-    category2.innerHTML = "${category[2].name}"
+        //     let choose = document.getElementById("question-box")
+        //     choose.innerHTML = "Choose a Category" 
+        //     let category1 = document.querySelector("li.opt1")
+        //     category1.innerHTML = "${category[1].name}" 
+        //     let category2 = document.querySelector("li.opt2")
+        //     category2.innerHTML = "${category[2].name}"
 
-    category.questions.forEach(question => renderQuestions(question))
-}));
+        //     category.questions.forEach(question => renderQuestions(question))
+        // })
+    //);
 
     
 
@@ -73,4 +72,4 @@ function renderQuestions() {
         return score   
   }
 
-}}
+}//}

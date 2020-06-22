@@ -39,3 +39,18 @@ renderCategory() {
   }  
            
   
+
+  console.log(categoriesObjects)
+}
+        // method: "POST"; 
+        // headers: {
+        //     "Content-Type"; "application/json";
+        //     "Accept"; "application/json" 
+        // };  
+        // body: JSON.stringify(categories) 
+    
+    // fetch(categories) 
+    // .then(response => response.json())
+     
+    // .then(json => 
+    //     console.log(json) 
