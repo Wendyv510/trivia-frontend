@@ -31,13 +31,13 @@ function renderCategory(category) {
 
              opt1.addEventListener(`onclick`, function(e) {
                 e.preventDefault(); 
-                renderQuestions() 
+                getQuestions() 
             })
  
             
             opt2.addEventListener(`onclick`, function(e) { 
                 e.preventDefault(); 
-                renderQuestions() 
+                getQuestions() 
             })  
 
 
@@ -60,7 +60,7 @@ function getQuestions() {
     }) 
 }
 
-function renderQuestions() { 
+function renderQuestions(question) { 
     
     let score = document.getElementById("score-card");
     for (let i = 0; i < questions.length; i++) {
