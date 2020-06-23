@@ -22,12 +22,12 @@ function renderCategory(category) {
 }
         // data.forEach(category => {
 
-        //     let choose = document.getElementById("question-box")
-        //     choose.innerHTML = "Choose a Category" 
-        //     let category1 = document.querySelector("li.opt1")
-        //     category1.innerHTML = "${category[1].name}" 
-        //     let category2 = document.querySelector("li.opt2")
-        //     category2.innerHTML = "${category[2].name}"
+             let choose = document.getElementById("questionBox")
+             choose.innerHTML = "Choose a Category" 
+             let category1 = document.getElementById("opt1")
+             category1.innerHTML = "${category[1].attributes.name}" 
+             let category2 = document.getElementById("opt2")
+             category2.innerHTML = "category[2].name"
 
         //     category.questions.forEach(question => renderQuestions(question))
         // })
