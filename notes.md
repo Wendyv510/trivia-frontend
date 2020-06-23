@@ -54,3 +54,14 @@ renderCategory() {
      
     // .then(json => 
     //     console.log(json) 
+
+    
+    renderQuestions
+        method: "POST", 
+        headers; {"Content-Type"; "application/json"} 
+        body: JSON.stringify(questions) 
+    
+    fetch(questions) 
+    .then(response => response.json()) 
+    .then(json => json.forEach(question => renderQuestion(this.description, this.option, this.answer)));
+    

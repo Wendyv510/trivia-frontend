@@ -19,19 +19,33 @@ function getCategories(){
 function renderCategory(category) { 
     console.log(category)
     //categories.forEach(category => console.log(category))
-}
-        // data.forEach(category => {
+
+        // categories.forEach(category => {
 
              let choose = document.getElementById("questionBox")
              choose.innerHTML = "Choose a Category" 
-             let category1 = document.getElementById("opt1")
-             category1.innerHTML = "${category[1].attributes.name}" 
+             let category1 = document.getElementById("opt1") 
+             category1.innerHTML = `${category.attributes.name}` 
              let category2 = document.getElementById("opt2")
-             category2.innerHTML = "category[2].name"
+             category2.innerHTML = `${category.attributes.name}`
 
-        //     category.questions.forEach(question => renderQuestions(question))
-        // })
+             opt1.addEventListener(`onclick`, function(e) {
+                e.preventDefault(); 
+                renderQuestions() 
+            })
+ 
+            
+            opt2.addEventListener(`onclick`, function(e) { 
+                e.preventDefault(); 
+                renderQuestions() 
+            })  
+
+
+
+            // category.questions.forEach(question => renderQuestions(question))
+         //})
     //);
+}
 
     
 
@@ -39,31 +53,27 @@ function getQuestions() {
 
     fetch(questions) 
     .then(response => response.json()) 
-    .then(json => json.forEach(question =>  renderQuestions(question.description)          ))
+    .then(json => {
+        for (const element of json.data) {
+            renderQuestions(element);
+          }
+    }) 
 }
 
 function renderQuestions() { 
-        method: "POST", 
-        headers; {"Content-Type"; "application/json"} 
-        body: JSON.stringify(questions) 
     
-    fetch(questions) 
-    .then(response => response.json()) 
-    .then(json => json.forEach(question => renderQuestion(this.description, this.option, this.answer)));
-    
-    let, score = 0, 
-    document.querySelector("span.score-card");
+    let score = document.getElementById("score-card");
     for (let i = 0; i < questions.length; i++) {
-    let question = document.querySelector("div.question-box")
-    question.innerHTML = "this.description"   
-    let opt1 = document.querySelector("li.opt1")
-    opt1.innerHTML = "this.option"
+    let question = document.getElementById("questionBox")
+    question.innerHTML = `${category.relationships.question.description}`   
+    let opt1 = document.getElementById("opt1")
+    opt1.innerHTML = `this.option`
     opt1.addEventListener("onclick", function(e) {
         e.preventDefault(); 
         alert; "Incorrect" 
     }) 
-    opt2.querySelector("li.opt2")
-    opt2.innerHTML = "this.answer"
+    let opt2 = document.getElementById("opt2")
+    opt2.innerHTML = `this.answer`
     opt2.addEventListener("onclick", function(e) { 
         e.preventDefault(); 
         score ++; 
