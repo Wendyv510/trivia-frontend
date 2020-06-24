@@ -17,10 +17,10 @@ function getCategories(){
 }
 
 function renderCategory(category) { 
-    console.log(category)
+    //console.log(category)
     //categories.forEach(category => console.log(category))
 
-        // categories.forEach(category => {
+         //categories.forEach(category => {
 
              let choose = document.getElementById("questionBox")
              choose.innerHTML = "Choose a Category" 
@@ -31,13 +31,13 @@ function renderCategory(category) {
 
              opt1.addEventListener(`onclick`, function(e) {
                 e.preventDefault(); 
-                getQuestions() 
+                e.getQuestions(category) 
             })
  
             
             opt2.addEventListener(`onclick`, function(e) { 
                 e.preventDefault(); 
-                getQuestions() 
+                getQuestions(category) 
             })  
 
 
@@ -65,7 +65,7 @@ function renderQuestions(question) {
     let score = document.getElementById("score-card");
     for (let i = 0; i < questions.length; i++) {
     let question = document.getElementById("questionBox")
-    question.innerHTML = `${category.relationships.question.description}`   
+    question.innerHTML = `${question.description}`   
     let opt1 = document.getElementById("opt1")
     opt1.innerHTML = `this.option`
     opt1.addEventListener("onclick", function(e) {
