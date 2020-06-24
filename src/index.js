@@ -1,6 +1,7 @@
  
 const categories = "https://localhost:3000/api/v1/categories"
 const questions = "https://localhost:3000/api/v1/questions"
+const users = "https://localhost:3000/api/v1/users"
 
 document.addEventListener('DOMContentLoaded', () => { 
     getCategories()
@@ -29,9 +30,9 @@ function renderCategory(category) {
              let category2 = document.getElementById("opt2")
              category2.innerHTML = `${category.attributes.name}`
 
-             opt1.addEventListener(`onclick`, function(e) {
+             opt1.addEventListener("onclick", (e) => {
                 e.preventDefault(); 
-                e.getQuestions(category) 
+                getQuestions() 
             })
  
             
