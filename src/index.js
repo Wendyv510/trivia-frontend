@@ -4,8 +4,16 @@ const questions = "https://localhost:3000/api/v1/questions"
 const users = "https://localhost:3000/api/v1/users"
 
 document.addEventListener('DOMContentLoaded', () => { 
-    getCategories(), getUsers() 
+    getCategories(), getUsers()
+    
+    const createNewUserForm = document.getElementById("new-user-form") 
+
+    createNewUserForm.addEventListener("submit", (e) => createFormHandler(e))
 }) 
+
+function createNewUserForm(e) { 
+    e.preventDefault() 
+}
 
 function getUsers(){ 
     fetch(users) 
