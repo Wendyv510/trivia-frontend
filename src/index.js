@@ -4,8 +4,18 @@ const questions = "https://localhost:3000/api/v1/questions"
 const users = "https://localhost:3000/api/v1/users"
 
 document.addEventListener('DOMContentLoaded', () => { 
-    getCategories()
+    getCategories(), getUsers() 
 }) 
+
+function getUsers(){ 
+    fetch(users) 
+    .then(response => response.json()) 
+    .then(json => { 
+        for (const element of json.data) {
+            renderUser(element);
+          }
+    })
+}
 
 function getCategories(){ 
     fetch(categories) 
@@ -17,8 +27,17 @@ function getCategories(){
     }) 
 }
 
+function renderUser(user) { 
+    let player1 = document.getElementById("player1")
+    player1.innerHTML = `${user.attributes.name}-${user.attributes.score}`
+    let player2 = document.getElementById("player2")
+    player2.innerHTML = `${user.attributes.name}-${user.attributes.score}`
+    let player3 = document.getElementById("player3")
+    player3.innerHTML = `${user.attributes.name}-${user.attributes.score}`
+}
+
 function renderCategory(category) { 
-    //console.log(category)
+    console.log(category)
     //categories.forEach(category => console.log(category))
 
          //categories.forEach(category => {
