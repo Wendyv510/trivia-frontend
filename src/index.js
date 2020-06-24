@@ -46,8 +46,8 @@ function renderCategory(category) {
              let category2 = document.getElementById("opt2")
              category2.innerHTML = `${category.attributes.name}`
 
-            opt1.addEventListener("click", getQuestions())
-            opt2.addEventListener("click", getQuestions())         
+            opt1.addEventListener("onclick", getQuestions())
+            opt2.addEventListener("onclick", getQuestions())         
 }
 
 
