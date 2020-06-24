@@ -114,3 +114,7 @@ img {
 .recent-scores { 
     color: white; 
 }
+
+.form-container .username .h3 { 
+    color: white;
+}

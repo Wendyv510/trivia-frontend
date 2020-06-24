@@ -63,7 +63,7 @@ function getQuestions() {
 }
 
 function renderQuestions(question) { 
-    console.log(question)
+    //console.log(question)
     
     let score = document.getElementById("score-card");
     for (let i = 0; i < questions.length; i++) {
