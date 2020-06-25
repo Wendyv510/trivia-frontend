@@ -19,12 +19,14 @@ function getUsers(){
     fetch(users) 
     .then(response => response.json()) 
     .then(json => { 
-        for (const user of json.data) {
-   
+        for (let user of json.data) { 
+
             let newUser = new User(user, user.attributes)  
 
-            renderUsers(user);
+            // newUser.renderUsers();
           }
+          // you should be calling the renderUsers function HERE
+          User.renderUsers(); 
     })
 }
 
@@ -102,3 +104,4 @@ function renderQuestions(question) {
   }
 
 }
+
