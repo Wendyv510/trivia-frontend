@@ -27,8 +27,8 @@ function getUsers(){
 
 function renderUsers(users) { 
     let player1 = document.getElementById("player1")
-    console.log(this)
-    player1.innerHTML = `${this.username} - ${users.attributes.score}`
+    player1.innerHTML = `${player1.username} - ${player1.score}`
+    debugger 
     let player2 = document.getElementById("player2")
     player2.innerHTML = `${users.attributes.username}-${users.attributes.score}`
     let player3 = document.getElementById("player3")
