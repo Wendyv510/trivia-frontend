@@ -19,11 +19,11 @@ function getUsers(){
     fetch(users) 
     .then(response => response.json()) 
     .then(json => { 
-        for (const element of json.data) {
+        for (const user of json.data) {
    
-            let newUser = new User(json.data)  
+            let newUser = new User(user, user.attributes)  
 
-            renderUsers(element);
+            renderUsers(user);
           }
     })
 }
@@ -42,8 +42,10 @@ function getCategories(){
     fetch(categories) 
     .then(response => response.json()) 
     .then(json => {
-        for (const element of json.data) {
-            renderCategory(element);
+        for (const category of json.data) {
+
+
+            renderCategory(category);
           }
     }) 
 }
@@ -68,8 +70,10 @@ function getQuestions() {
     fetch(questions) 
     .then(response => response.json()) 
     .then(json => {
-        for (const element of json.data) {
-            renderQuestions(element);
+        for (const question of json.data) {
+
+            
+            renderQuestions(question);
           }
     }) 
 }
