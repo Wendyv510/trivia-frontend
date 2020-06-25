@@ -1,6 +1,6 @@
 class User { 
     constructor(user, userAttributes) {
-        this.id = user.id 
+        this.id = userAttributes.id  
         this.username = userAttributes.username  
         this.score = userAttributes.score
         User.all << this  
@@ -16,7 +16,7 @@ function renderUsers(users) {
     player3.innerHTML = `${this.username}-${this.score}`
 }
 
-let player1 = new User("lila123", '8');
+let player1 = new User("lila123", 8);
 let player2 = new User("phil9876", 5);
 let player3 = new User("songbir45d", 7);
 let player4 = new User("rainbow36", 8);
