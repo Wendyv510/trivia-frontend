@@ -6,7 +6,7 @@ const users = "https://localhost:3000/api/v1/users"
 document.addEventListener('DOMContentLoaded', () => { 
     getCategories(), getUsers()
     
-    const createNewUserForm = document.getElementById("new-user-form") 
+    const createNewUserForm = document.getElementById("new-user") 
 
     createNewUserForm.addEventListener("submit", (e) => createFormHandler(e))
 }) 
@@ -20,18 +20,19 @@ function getUsers(){
     .then(response => response.json()) 
     .then(json => { 
         for (const element of json.data) {
-            renderUser(element);
+            renderUsers(element);
           }
     })
 }
 
-function renderUser(user) { 
+function renderUsers(users) { 
     let player1 = document.getElementById("player1")
-    player1.innerHTML = `${user.attributes.name}-${user.attributes.score}`
+    console.log(this)
+    player1.innerHTML = `${this.username} - ${users.attributes.score}`
     let player2 = document.getElementById("player2")
-    player2.innerHTML = `${user.attributes.name}-${user.attributes.score}`
+    player2.innerHTML = `${users.attributes.username}-${users.attributes.score}`
     let player3 = document.getElementById("player3")
-    player3.innerHTML = `${user.attributes.name}-${user.attributes.score}`
+    player3.innerHTML = `${users.attributes.username}-${users.attributes.score}`
 }
 
 function getCategories(){ 
