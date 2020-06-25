@@ -1,9 +1,19 @@
 class User { 
     constructor(user, userAttributes) {
+        this.id = user.id 
         this.username = userAttributes.username  
         this.score = userAttributes.score
-        User.all.push(this)  
+        User.all << this  
     }
+}
+
+function renderUsers(users) { 
+    let player1 = document.getElementById("player1")
+    player1.innerHTML = `${this.username} - ${this.score}` 
+    let player2 = document.getElementById("player2")
+    player2.innerHTML = `${this.username}-${this.score}`
+    let player3 = document.getElementById("player3")
+    player3.innerHTML = `${this.username}-${this.score}`
 }
 
 let player1 = new User("lila123", '8');
