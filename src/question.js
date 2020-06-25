@@ -5,6 +5,7 @@ class Question {
         this.answer = questionAttributes.answer 
         this.option = questionAttributes.option 
         this.category_id = questionAttributes.category_id 
+        Question.all << this 
     }
 }
 

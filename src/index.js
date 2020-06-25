@@ -20,7 +20,7 @@ function getUsers(){
     .then(response => response.json()) 
     .then(json => { 
         for (const element of json.data) {
-  
+   
             let newUser = new User(json.data)  
 
             renderUsers(element);
