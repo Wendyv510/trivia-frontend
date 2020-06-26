@@ -10,13 +10,15 @@ class Category {
     
                  let choose = document.getElementById("questionBox")
                  choose.innerHTML = "Choose a Category" 
+                 Category.all.forEach(category => {
                  let category1 = document.getElementById("opt1") 
                  category1.innerHTML = `${this.name}` 
                  let category2 = document.getElementById("opt2")
                  category2.innerHTML = `${this.name}`
     
                 opt1.addEventListener("onclick", getQuestions())
-                opt2.addEventListener("onclick", getQuestions())         
+                opt2.addEventListener("onclick", getQuestions())
+            })         
     }
     
 }
