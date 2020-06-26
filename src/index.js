@@ -46,25 +46,13 @@ function getCategories(){
     .then(json => {
         for (const category of json.data) {
 
-
-            renderCategory(category);
-          }
+            let newCategory = new Category(category, category.attributes)
+        }
+            Category.renderCategory();
+          
     }) 
 }
 
-function renderCategory(category) { 
-    //console.log(category)
-
-             let choose = document.getElementById("questionBox")
-             choose.innerHTML = "Choose a Category" 
-             let category1 = document.getElementById("opt1") 
-             category1.innerHTML = `${category.attributes.name}` 
-             let category2 = document.getElementById("opt2")
-             category2.innerHTML = `${category.attributes.name}`
-
-            opt1.addEventListener("onclick", getQuestions())
-            opt2.addEventListener("onclick", getQuestions())         
-}
 
 
 function getQuestions() {
@@ -74,34 +62,10 @@ function getQuestions() {
     .then(json => {
         for (const question of json.data) {
 
+            let newQuestion = new Question(question, question.attributes)
             
-            renderQuestions(question);
           }
+          Question.renderQuestions();
     }) 
-}
-
-function renderQuestions(question) { 
-    //console.log(question)
-    
-    let score = document.getElementById("score-card");
-    for (let i = 0; i < questions.length; i++) {
-    let question = document.getElementById("questionBox")
-    question.innerHTML = `${question.attributes.description}`   
-    let opt1 = document.getElementById("opt1")
-    opt1.innerHTML = `${question.attributes.option}`
-    opt1.addEventListener("onclick", function(e) {
-        e.preventDefault(); 
-        alert; "Incorrect" 
-    }) 
-    let opt2 = document.getElementById("opt2")
-    opt2.innerHTML = `${question.attributes.answer}`
-    opt2.addEventListener("onclick", function(e) { 
-        e.preventDefault(); 
-        score ++; 
-        alert; "Correct" 
-    })  
-        return score   
-  }
-
 }
 
