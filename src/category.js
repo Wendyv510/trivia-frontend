@@ -17,8 +17,14 @@ class Category {
                  category2.innerHTML = `${category.name}`
 
     
-                opt1.addEventListener("onclick", getQuestions())
-                opt2.addEventListener("onclick", getQuestions())
+                opt1.addEventListener('onclick', function(e) { 
+                    e.preventDefault() 
+                    getQuestions()
+                })
+                opt2.addEventListener('onclick', function(e) { 
+                    e.preventDefault() 
+                    getQuestions()
+                })
             })         
     }
     

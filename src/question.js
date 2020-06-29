@@ -21,6 +21,7 @@ class Question {
         opt1.addEventListener(`click`, function(e) {
             e.preventDefault(); 
             alert ("Incorrect") 
+            // what would I put here to continue to loop to next question 
         })
         let opt2 = document.getElementById("opt2")
         opt2.innerHTML = `${question.answer}`
