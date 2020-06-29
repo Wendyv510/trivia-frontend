@@ -23,9 +23,7 @@ function getUsers(){
 
             let newUser = new User(user, user.attributes)  
 
-            // newUser.renderUsers();
           }
-          // you should be calling the renderUsers function HERE
           User.renderUsers(); 
     })
 }
@@ -40,9 +38,7 @@ function getCategories(){
 
             let newCategory = new Category(category, category.attributes)
         }
-            Category.renderCategory();
- 
-          
+            Category.renderCategory();    
     }) 
 }
 
