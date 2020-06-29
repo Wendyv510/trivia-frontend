@@ -53,7 +53,7 @@ function getQuestions() {
     fetch(questions) 
     .then(response => response.json()) 
     .then(json => {
-        for (const question of json.data) {
+        for (let question of json.data) {
 
             let newQuestion = new Question(question, question.attributes)
             
