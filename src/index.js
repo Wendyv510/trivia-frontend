@@ -30,25 +30,18 @@ function getUsers(){
     })
 }
 
-//function renderUsers(users) { 
-  //  let player1 = document.getElementById("player1")
-    //player1.innerHTML = `${player1.username} - ${player1.score}`
-    //debugger
-    //let player2 = document.getElementById("player2")
-    //player2.innerHTML = `${users.attributes.username}-${users.attributes.score}`
-    //let player3 = document.getElementById("player3")
-    //player3.innerHTML = `${users.attributes.username}-${users.attributes.score}`
-//}
+
 
 function getCategories(){ 
     fetch(categories) 
     .then(response => response.json()) 
     .then(json => {
-        for (const category of json.data) {
+        for (let category of json.data) {
 
             let newCategory = new Category(category, category.attributes)
         }
             Category.renderCategory();
+ 
           
     }) 
 }
