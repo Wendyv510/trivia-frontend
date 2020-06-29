@@ -20,7 +20,7 @@ class Question {
         opt1.innerHTML = `${question.option}`
         opt1.addEventListener(`click`, function(e) {
             e.preventDefault(); 
-            alert; "Incorrect" 
+            e.alert; "Incorrect" 
          
         let opt2 = document.getElementById("opt2")
         opt2.innerHTML = `${question.answer}`
@@ -30,10 +30,13 @@ class Question {
             alert; "Correct"
         })
         }) 
-        })     
+        }) 
+         
       }
     }   
 }
+
+
 
 Question.all = [] 
 
