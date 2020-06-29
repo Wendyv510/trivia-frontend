@@ -20,15 +20,15 @@ class Question {
         opt1.innerHTML = `${question.option}`
         opt1.addEventListener(`click`, function(e) {
             e.preventDefault(); 
-            e.alert; "Incorrect" 
-         
+            alert ("Incorrect") 
+        })
         let opt2 = document.getElementById("opt2")
         opt2.innerHTML = `${question.answer}`
         opt2.addEventListener("click", function(e) { 
             e.preventDefault(); 
             score ++; 
-            alert; "Correct"
-        })
+            alert ("Correct")
+        
         }) 
         }) 
          
