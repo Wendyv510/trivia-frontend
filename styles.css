@@ -118,3 +118,7 @@ img {
 .form-container { 
     color: white;
 }
+
+.correct-incorrect {
+    color: red; 
+}

@@ -15,21 +15,21 @@ class Question {
         let correct = "Correct" 
         let incorrect = "Incorrect" 
         let  resultContainer = document.getElementsByClassName("correct/incorrect") 
-        resultContainer.innerHTML = `correct` `incorrect` 
+        resultContainer.innerHTML =  "Correct"
         for (let i = 0; i < questions.length; i++) {
         Question.all.forEach(question => {  
         let question1 = document.getElementById("questionBox")
         question1.innerHTML = `${question.description}`   
         let opt1 = document.getElementById("opt1")
         opt1.innerHTML = `${question.option}`
-        opt1.addEventListener(`click`, function(e) {
-            e.preventDefault();  
+        opt1.addEventListener('click', function() {
+              
             
         })
         let opt2 = document.getElementById("opt2")
         opt2.innerHTML = `${question.answer}`
-        opt2.addEventListener('click', function(e) { 
-            e.preventDefault(); 
+        opt2.addEventListener('click', function() { 
+            
             score ++; 
         
         }) 

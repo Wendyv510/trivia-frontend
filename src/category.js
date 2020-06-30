@@ -14,15 +14,14 @@ class Category {
                  let category1 = document.getElementById("opt1") 
                  category1.innerHTML = `${category.name}` 
                  let category2 = document.getElementById("opt2")
-                 category2.innerHTML = `${category.name}`
-debugger 
+                 category2.innerHTML = `${category.name}` 
     
                 category1.addEventListener('click', function() { 
-                    //e.preventDefault() 
+                    
                     getQuestions()
                 })
                 category2.addEventListener('click', function() { 
-                    //e.preventDefault() 
+                    
                     getQuestions()
                 })
             })         
