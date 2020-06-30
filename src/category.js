@@ -15,18 +15,16 @@ class Category {
                  category1.innerHTML = `${category.name}` 
                  let category2 = document.getElementById("opt2")
                  category2.innerHTML = `${category.name}`
-
+debugger 
     
-                opt1.addEventListener('onclick', //function(e) { 
+                category1.addEventListener('click', function() { 
                     //e.preventDefault() 
                     getQuestions()
-                //}
-                )
-                opt2.addEventListener('onclick', //function(e) { 
+                })
+                category2.addEventListener('click', function() { 
                     //e.preventDefault() 
                     getQuestions()
-                //}
-                )
+                })
             })         
     }
     

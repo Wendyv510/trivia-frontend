@@ -14,6 +14,8 @@ class Question {
         let score = document.getElementById("score-card");
         let correct = "Correct" 
         let incorrect = "Incorrect" 
+        let  resultContainer = document.getElementsByClassName("correct/incorrect") 
+        resultContainer.innerHTML = `correct` `incorrect` 
         for (let i = 0; i < questions.length; i++) {
         Question.all.forEach(question => {  
         let question1 = document.getElementById("questionBox")
@@ -21,17 +23,14 @@ class Question {
         let opt1 = document.getElementById("opt1")
         opt1.innerHTML = `${question.option}`
         opt1.addEventListener(`click`, function(e) {
-            e.preventDefault();
-            incorrect += questions[i] + "/n"  
-            //alert ("Incorrect") 
-            // what would I put here to continue to loop to next question 
+            e.preventDefault();  
+            
         })
         let opt2 = document.getElementById("opt2")
         opt2.innerHTML = `${question.answer}`
-        opt2.addEventListener("click", function(e) { 
+        opt2.addEventListener('click', function(e) { 
             e.preventDefault(); 
             score ++; 
-            alert ("Correct")
         
         }) 
         }) 
