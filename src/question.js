@@ -14,8 +14,8 @@ class Question {
         let score = document.getElementById("score-card");
         let correct = "Correct" 
         let incorrect = "Incorrect" 
-        let  resultContainer = document.getElementsByClassName("correct/incorrect") 
-        resultContainer.innerHTML =  "Correct"
+        //let  resultContainer = document.getElementsByClass("correct/incorrect") 
+        //resultContainer.innerHTML =  "Correct"
         for (let i = 0; i < questions.length; i++) {
         Question.all.forEach(question => {  
         let question1 = document.getElementById("questionBox")
