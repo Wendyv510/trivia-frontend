@@ -11,11 +11,9 @@ class Question {
     static renderQuestions() { 
         //console.log(question)
         
-        let score = document.getElementById("score-card");
-        let correct = "Correct" 
-        let incorrect = "Incorrect" 
-        //let  resultContainer = document.getElementsByClass("correct/incorrect") 
-        //resultContainer.innerHTML =  "Correct"
+        let score = document.getElementById("score-card"); 
+        let  resultContainer = document.getElementsByClass("correct/incorrect") 
+        
         for (let i = 0; i < questions.length; i++) {
         Question.all.forEach(question => {  
         let question1 = document.getElementById("questionBox")
@@ -23,13 +21,13 @@ class Question {
         let opt1 = document.getElementById("opt1")
         opt1.innerHTML = `${question.option}`
         opt1.addEventListener('click', function() {
-              
+            resultContainer.innerHTML =  "Incorrect"   
             
         })
         let opt2 = document.getElementById("opt2")
         opt2.innerHTML = `${question.answer}`
         opt2.addEventListener('click', function() { 
-            
+            resultContainer.innerHTML =  "Correct"
             score ++; 
         
         }) 
