@@ -9,35 +9,51 @@ class Question {
     }
 
     static renderQuestions() { 
-        //console.log(question)
         
         let score = document.getElementById("score-card"); 
         let  resultContainer = document.getElementById("correct-incorrect") 
         
         for (let i = 0; i < questions.length; i++) {
-        Question.all.forEach(question => {  
-        let question1 = document.getElementById("questionBox")
-        question1.innerHTML = `${question.description}`   
+         //   Question.all.forEach(question => {
+         //       let questions = document.getElementById("questionBox")
+         //        questions.innerHTML = `${question.description}` 
+         //        let ul2 = document.getElementById("ul") 
+                  
+         //            let li = document.createElement("li") 
+         //            li.innerHTML = `${question.option}`
+         //            li.addEventListener('click', function() {
+         //              resultContainer.innerHTML =  "Incorrect"   
+         //            })
+         //            ul.appendChild(li)
+         //            let li1 = document.createElement("li1") 
+         //            li1.innerHTML = `${question.answer}`
+         //            li1.addEventListener('click', function() { 
+         //            resultContainer.innerHTML =  "Correct"
+         //            score ++;
+         //            ul.appendChild(li1)
+         //           }) 
+         //        })
+       Question.all.forEach(question => {  
+        let questions = document.getElementById("questionBox")
+        questions.innerHTML = `${question.description}`   
         let opt1 = document.getElementById("opt1")
         opt1.innerHTML = `${question.option}`
-        opt1.addEventListener('click', function() {
-            resultContainer.innerHTML =  "Incorrect"   
-            
+        opt1.addEventListener('click', function()  {
+            resultContainer.innerHTML =  "Incorrect"
+            ++questions  
         })
         let opt2 = document.getElementById("opt2")
         opt2.innerHTML = `${question.answer}`
-        opt2.addEventListener('click', function() { 
+        opt2.addEventListener('click', function()  { 
             resultContainer.innerHTML =  "Correct"
-            score ++; 
-        
+            ++questions
+            score ++;
+            
         }) 
-        }) 
-         
+        })    
       }
-    }   
+    }
 }
-
-
 
 Question.all = [] 
 
