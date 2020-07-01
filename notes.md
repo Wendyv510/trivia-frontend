@@ -65,3 +65,18 @@ renderCategory() {
     .then(response => response.json()) 
     .then(json => json.forEach(question => renderQuestion(this.description, this.option, this.answer)));
     
+
+    -Next button HTML 
+<!-- <div class="next">
+        <button id="btnNext" type="button" onclick="next()">
+          Next
+        </button>
+    </div>-->
+
+    -Category JS 
+     Category.all.forEach(category => {
+                 let category1 = document.getElementById("opt1") 
+                 category1.innerHTML = `${category.name}` 
+                 let category2 = document.getElementById("opt2")
+                 category2.innerHTML = `${category.name}` 
+

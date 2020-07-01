@@ -14,25 +14,25 @@ class Question {
         let  resultContainer = document.getElementById("correct-incorrect") 
         
         for (let i = 0; i < questions.length; i++) {
-         //   Question.all.forEach(question => {
-         //       let questions = document.getElementById("questionBox")
-         //        questions.innerHTML = `${question.description}` 
-         //        let ul2 = document.getElementById("ul") 
+             //     Question.all.forEach(question => {
+             //   let questions = document.getElementById("questionBox")
+             //    questions.innerHTML = `${question.description}` 
+             //    let ul2 = document.getElementById("ul2") 
                   
-         //            let li = document.createElement("li") 
-         //            li.innerHTML = `${question.option}`
-         //            li.addEventListener('click', function() {
-         //              resultContainer.innerHTML =  "Incorrect"   
-         //            })
-         //            ul.appendChild(li)
-         //            let li1 = document.createElement("li1") 
-         //            li1.innerHTML = `${question.answer}`
-         //            li1.addEventListener('click', function() { 
-         //            resultContainer.innerHTML =  "Correct"
-         //            score ++;
-         //            ul.appendChild(li1)
-         //           }) 
-         //        })
+             //       let li = document.createElement("li") 
+             //       li.innerHTML = `${question.option}`
+             //        li.addEventListener('click', function() {
+             //          resultContainer.innerHTML =  "Incorrect"   
+              //       })
+             //        ul.appendChild(li)
+             //        let li1 = document.createElement("li1") 
+             //        li1.innerHTML = `${question.answer}`
+             //        li1.addEventListener('click', function() { 
+             //        resultContainer.innerHTML =  "Correct"
+             //        score ++;
+             //        ul.appendChild(li1)
+             //       }) 
+             //   })
        Question.all.forEach(question => {  
         let questions = document.getElementById("questionBox")
         questions.innerHTML = `${question.description}`   
