@@ -12,7 +12,7 @@ class Question {
         //console.log(question)
         
         let score = document.getElementById("score-card"); 
-        let  resultContainer = document.getElementsByClass("correct/incorrect") 
+        let  resultContainer = document.getElementById("correct-incorrect") 
         
         for (let i = 0; i < questions.length; i++) {
         Question.all.forEach(question => {  
