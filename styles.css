@@ -113,6 +113,7 @@ img {
 
 .recent-scores { 
     color: white; 
+    float: left 
 }
 
 .correct-incorrect { 
