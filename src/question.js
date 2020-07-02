@@ -16,7 +16,7 @@ class Question {
         let i = 0 
         // Focus on displaying all the questions and answers that correspond to that question
         // Focus on only displaying ONE at a time
-             while ( i < Question.all.length) {
+            // while ( i < Question.all.length) {
              //   Question.all.forEach(question => {
              //   let questions = document.getElementById("questionBox")
              //    questions.innerHTML = `${question.description}` 
@@ -47,7 +47,7 @@ class Question {
          i++
          
         }) 
-       })    
+       //})    
       }
     }
 }
