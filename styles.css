@@ -116,15 +116,16 @@ img {
     float: left 
 }
 
-.correct-incorrect { 
-    color: white;
+#correct-incorrect { 
+    color: red;
     background-color: teal;
     margin-left: auto;
     margin-right: auto;
+    text-align: center 
     
 }
 
-.category-questions { 
+#category-questions { 
     color: white 
 }
 
