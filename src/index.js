@@ -8,11 +8,13 @@ document.addEventListener('DOMContentLoaded', () => {
     
     const createNewUserForm = document.getElementById("new-user") 
 
-    createNewUserForm.addEventListener("submit", (e) => createFormHandler(e))
+    createNewUserForm.addEventListener("submit", (e) => 
+    createFormHandler(e))
 }) 
 
-function createNewUserForm(e) { 
-    e.preventDefault() 
+function createFromHandler(e) { 
+    e.preventDefault()
+     let newUser = document.querySelector("#create-user").value
 }
 
 function getUsers(){ 
