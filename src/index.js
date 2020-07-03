@@ -15,6 +15,11 @@ document.addEventListener('DOMContentLoaded', () => {
 function createFromHandler(e) { 
     e.preventDefault()
      let newUser = document.querySelector("#create-user").value
+     postFetch(newUser) 
+}
+
+function postFetch(newUser) { 
+    console.log(newUser)
 }
 
 function getUsers(){ 

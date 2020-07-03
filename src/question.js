@@ -22,16 +22,18 @@ class Question {
         let button1 = document.createElement("BUTTON") 
         button1.innerHTML = `${question.option}`
         ol.appendChild(button1)
-        button1.addEventListener('click', function() {
+        button1.addEventListener('click', function(e) {
+           e.preventDefault() 
            resultContainer.innerHTML =  "Incorrect"
         })
          
         let button2 = document.createElement("BUTTON") 
         button2.innerHTML = `${question.answer}`
         ol.appendChild(button2)
-        button2.addEventListener('click', function() { 
-        resultContainer.innerHTML =  "Correct"
-        ++score;
+        button2.addEventListener('click', function(e) {
+            e.preventDefault()
+            resultContainer.innerHTML =  "Correct"
+            ++score;
         })     
       })
     }
