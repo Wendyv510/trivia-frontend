@@ -31,7 +31,7 @@ class Question {
         ol.appendChild(button2)
         button2.addEventListener('click', function() { 
         resultContainer.innerHTML =  "Correct"
-        score ++;
+        ++score;
         })     
       })
     }
