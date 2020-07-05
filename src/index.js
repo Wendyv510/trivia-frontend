@@ -12,16 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
     createFormHandler(e))
 }) 
 
-function createFromHandler(e) { 
-     e.preventDefault()
-     let newUser = document.querySelector("#create-user").value
-     postFetch(newUser) 
-}
 
-function postFetch(newUser) { 
-    console.log(newUser)
-    
-}
 
 function getUsers(){ 
     fetch(users) 
@@ -34,6 +25,25 @@ function getUsers(){
           }
           User.renderUsers(); 
     })
+}
+
+function createFromHandler(e) { 
+    e.preventDefault()
+    let newUser = document.querySelector("#create-user").value
+    postFetch(newUser) 
+}
+
+function postFetch(newUser) { 
+   fetch (users, { 
+       method: "POST",
+       headers: {"Content-Type":"application/json"},
+       body: JSON.stringify({
+           username: username 
+       })
+   })
+       .then(response => response.json()) 
+       .then(newUser =>  
+       })  
 }
 
 
