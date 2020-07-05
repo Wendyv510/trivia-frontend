@@ -14,7 +14,10 @@ class Question {
         score.innerHTML = 0; 
         let  resultContainer = document.getElementById("correct-incorrect")
         let categoryQuestions = document.getElementById("category-questions") 
-            
+         
+        //let filter = Question.all.filter(function(question) {
+        //    return question.category_id == "Category.id" 
+        //})
         Question.all.forEach(question => {
         //document.querySelector(`id="${question.category_id}"`)  
         let ol = document.createElement("ol")
