@@ -14,7 +14,8 @@ class Question {
         let  resultContainer = document.getElementById("correct-incorrect")
         let categoryQuestions = document.getElementById("category-questions") 
             
-        Question.all.forEach(question => {  
+        Question.all.forEach(question => {
+        //document.querySelector(`id="${question.category_id}"`)  
         let ol = document.createElement("ol")
         ol.innerHTML = `${question.description}`   
         categoryQuestions.appendChild(ol)
