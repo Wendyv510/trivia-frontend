@@ -30,7 +30,7 @@ function getUsers(){
 function createFromHandler(e) { 
     e.preventDefault()
     let newUser = document.querySelector("#create-user").value
-    let score = document.querySelector("score").value 
+    let score = document.querySelector("#score").value 
     postFetch(newUser) 
 }
 
@@ -45,7 +45,7 @@ function postFetch(newUser) {
    })
        .then(response => response.json()) 
        .then(newUser =>{
-           
+
        })  
 }
 

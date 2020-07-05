@@ -10,7 +10,8 @@ class Question {
 
     static renderQuestions() {
       
-        let score = document.getElementById("scoreCard"); 
+        let score = document.getElementById("scoreCard");
+        score.innerHTML = 0; 
         let  resultContainer = document.getElementById("correct-incorrect")
         let categoryQuestions = document.getElementById("category-questions") 
             
