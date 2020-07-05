@@ -15,10 +15,11 @@ class Question {
         let  resultContainer = document.getElementById("correct-incorrect")
         let categoryQuestions = document.getElementById("category-questions") 
          
-        //let filter = Question.all.filter(function(question) {
-        //    return question.category_id == "Category.id" 
-        //})
-        Question.all.forEach(question => {
+        let filter = Question.all.filter(function(question) {
+            debugger 
+            return question.category_id == Category.id 
+        })
+        filter.forEach(question => {
         //document.querySelector(`id="${question.category_id}"`)  
         let ol = document.createElement("ol")
         ol.innerHTML = `${question.description}`   
