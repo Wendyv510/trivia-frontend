@@ -35,7 +35,7 @@ class Question {
         button2.addEventListener('click', function(e) {
             e.preventDefault()
             resultContainer.innerHTML =  "Correct"
-            score++;
+            score.innerHTML++;
         })     
       })
     }
