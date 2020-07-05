@@ -30,6 +30,7 @@ function getUsers(){
 function createFromHandler(e) { 
     e.preventDefault()
     let newUser = document.querySelector("#create-user").value
+    let score = document.querySelector("score").value 
     postFetch(newUser) 
 }
 
@@ -38,11 +39,13 @@ function postFetch(newUser) {
        method: "POST",
        headers: {"Content-Type":"application/json"},
        body: JSON.stringify({
-           username: username 
+           username: username,
+           score: score  
        })
    })
        .then(response => response.json()) 
-       .then(newUser =>  
+       .then(newUser =>{
+           
        })  
 }
 
