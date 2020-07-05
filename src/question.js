@@ -8,17 +8,17 @@ class Question {
         Question.all.push(this) 
     }
 
-    static renderQuestions() {
+    static renderQuestions(e) {
       
         let score = document.getElementById("scoreCard");
         score.innerHTML = 0; 
         let  resultContainer = document.getElementById("correct-incorrect")
         let categoryQuestions = document.getElementById("category-questions") 
-         
-        let filter = Question.all.filter(function(question) {
-            debugger 
-            return question.category_id == Category.id 
+        
+        let filter = Question.all.filter(function(question) { 
+            return question.category_id == parseInt(e.target.id) 
         })
+        console.log(filter)
         filter.forEach(question => {
         //document.querySelector(`id="${question.category_id}"`)  
         let ol = document.createElement("ol")

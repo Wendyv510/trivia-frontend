@@ -65,7 +65,7 @@ function getCategories(){
 
 
 
-function getQuestions() {
+function getQuestions(e) {
 
     fetch(questions) 
     .then(response => response.json()) 
@@ -75,7 +75,7 @@ function getQuestions() {
             let newQuestion = new Question(question, question.attributes)
             
           }
-          Question.renderQuestions();
+          Question.renderQuestions(e);
     }) 
 }
 
