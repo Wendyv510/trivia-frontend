@@ -13,7 +13,7 @@ class Question {
         let score = document.getElementById("scoreCard"); 
         let  resultContainer = document.getElementById("correct-incorrect")
         let categoryQuestions = document.getElementById("category-questions") 
-             
+            
         Question.all.forEach(question => {  
         let ol = document.createElement("ol")
         ol.innerHTML = `${question.description}`   
@@ -33,7 +33,7 @@ class Question {
         button2.addEventListener('click', function(e) {
             e.preventDefault()
             resultContainer.innerHTML =  "Correct"
-            ++score;
+            score++;
         })     
       })
     }
