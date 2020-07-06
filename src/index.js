@@ -40,13 +40,13 @@ function postFetch(newUser) {
        method: "POST",
        headers: {"Content-Type":"application/json"},
        body: JSON.stringify({
-           username: username,
-           score: score  
+           username: `${username}`,
+           score: `${score}`  
        })
    })
        .then(response => response.json()) 
        .then(newUser =>{
-            User.renderUsers(newUser) 
+            getUsers()  
        })  
 }
 
