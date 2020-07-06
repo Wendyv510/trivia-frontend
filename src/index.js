@@ -8,8 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
     
     const createNewUserForm = document.getElementById("new-user") 
 
-    createNewUserForm.addEventListener("submit", (e) => 
-    createFormHandler(e))
+    createNewUserForm.addEventListener("submit", createFormHandler)
 }) 
 
 
@@ -21,13 +20,12 @@ function getUsers(){
         for (let user of json.data) { 
 
             let newUser = new User(user, user.attributes)  
-
+            newUser.renderUser()
           }
-          User.renderUsers(); 
     })
 }
 
-function createFromHandler(e) { 
+function createFormHandler(e) { 
     e.preventDefault()
     let newUser = document.querySelector("#create-user").value
     let score = document.querySelector("#score").value 
@@ -40,13 +38,17 @@ function postFetch(newUser) {
        method: "POST",
        headers: {"Content-Type":"application/json"},
        body: JSON.stringify({
-           username: `${username}`,
-           score: `${score}`  
+           username: newUser,
+           score: 1 // fix score
+
        })
    })
        .then(response => response.json()) 
-       .then(newUser =>{
-            getUsers()  
+       .then(user =>{
+           debugger 
+          let newUser = new User(user, user.attributes)
+         // renderUser
+          console.log(newUser)
        })  
 }
 

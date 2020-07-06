@@ -13,13 +13,13 @@ class User {
 
 
 
- static renderUsers() { 
+  renderUser() { 
     let ul1 = document.getElementById("ul1") 
-    User.all.forEach(user => { 
+    
         let li = document.createElement("li") 
-        li.innerHTML = `${user.username} ${user.score}`
+        li.innerHTML = `${this.username} ${this.score}`
         ul1.appendChild(li) 
-    })
+    
     
   }
 }
