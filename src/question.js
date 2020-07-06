@@ -18,9 +18,9 @@ class Question {
         let filter = Question.all.filter(function(question) { 
             return question.category_id == parseInt(e.target.id) 
         })
-        console.log(filter)
+        
         filter.forEach(question => {
-        //document.querySelector(`id="${question.category_id}"`)  
+  
         let ol = document.createElement("ol")
         ol.innerHTML = `${question.description}`   
         categoryQuestions.appendChild(ol)
@@ -40,7 +40,8 @@ class Question {
             e.preventDefault()
             resultContainer.innerHTML =  "Correct"
             score.innerHTML++;
-        })     
+        }) 
+       // user.score.push(score.innerHTML)    
       })
     }
 }
