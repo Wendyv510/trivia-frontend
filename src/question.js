@@ -40,6 +40,7 @@ class Question {
             e.preventDefault()
             resultContainer.innerHTML =  "Correct"
             score.innerHTML++;
+            currentScore++
         }) 
        // user.score.push(score.innerHTML)    
       })

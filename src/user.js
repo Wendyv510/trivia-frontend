@@ -1,8 +1,8 @@
 class User { 
-    constructor(user, userAttributes) {
+    constructor(user) {
         this.id = user.id  
-        this.username = userAttributes.username  
-        this.score = userAttributes.score
+        this.username = user.username  
+        this.score = user.score
         User.all.push(this) 
     }
 

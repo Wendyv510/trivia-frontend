@@ -2,6 +2,7 @@
 const categories = "https://localhost:3000/api/v1/categories"
 const questions = "https://localhost:3000/api/v1/questions"
 const users = "https://localhost:3000/api/v1/users"
+let currentScore = 0 
 
 document.addEventListener('DOMContentLoaded', () => { 
     getCategories(), getUsers()
@@ -18,8 +19,8 @@ function getUsers(){
     .then(response => response.json()) 
     .then(json => { 
         for (let user of json.data) { 
-
-            let newUser = new User(user, user.attributes)  
+            let userData = Object.assign({}, {id: user.id}, user.attributes) 
+            let newUser = new User(userData)  
             newUser.renderUser()
           }
     })
@@ -39,16 +40,14 @@ function postFetch(newUser) {
        headers: {"Content-Type":"application/json"},
        body: JSON.stringify({
            username: newUser,
-           score: 1 // fix score
+           score: currentScore
 
        })
    })
        .then(response => response.json()) 
        .then(user =>{
-           debugger 
-          let newUser = new User(user, user.attributes)
-         // renderUser
-          console.log(newUser)
+          let newUser = new User(user)
+          newUser.renderUser()
        })  
 }
 
