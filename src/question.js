@@ -22,7 +22,8 @@ class Question {
         filter.forEach(question => {
   
         let ul = document.createElement("ol")
-        let li = document.createElement("li") 
+        let li = document.createElement("li")
+        li.setAttribute("id", `${question.id}`); 
         li.innerHTML = `${question.description}`   
         categoryQuestions.appendChild(ul)
         ul.appendChild(li) 
@@ -33,7 +34,7 @@ class Question {
         button1.addEventListener('click', function(e) {
            e.preventDefault() 
            resultContainer.innerHTML =  "Incorrect"
-           ul.remove("li")
+           ul.remove("id")
         })
          
         let button2 = document.createElement("BUTTON") 
@@ -44,7 +45,7 @@ class Question {
             resultContainer.innerHTML =  "Correct"
             score.innerHTML++;
             currentScore++
-            ul.remove("li")
+            ul.remove("id")
         })     
       })
     }
