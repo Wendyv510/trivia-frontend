@@ -22,7 +22,7 @@ function getUsers(){
             let userData = Object.assign({}, {id: user.id}, user.attributes) 
             let newUser = new User(userData)  
             newUser.renderUser()
-          }
+        }
     })
 }
 
@@ -31,7 +31,6 @@ function createFormHandler(e) {
     let newUser = document.querySelector("#create-user").value
     let score = document.querySelector("#score").value 
     postFetch(newUser)
- 
 }
 
 function postFetch(newUser) { 
@@ -41,16 +40,14 @@ function postFetch(newUser) {
        body: JSON.stringify({
            username: newUser,
            score: currentScore
-
        })
-   })
+    })
        .then(response => response.json()) 
        .then(user =>{
           let newUser = new User(user)
           newUser.renderUser()
        })  
 }
-
 
 
 function getCategories(){ 
@@ -66,7 +63,6 @@ function getCategories(){
 }
 
 
-
 function getQuestions(e) {
 
     fetch(questions) 
@@ -76,8 +72,8 @@ function getQuestions(e) {
 
             let newQuestion = new Question(question, question.attributes)
             
-          }
-          Question.renderQuestions(e);
+        }
+        Question.renderQuestions(e);
     }) 
 }
 
