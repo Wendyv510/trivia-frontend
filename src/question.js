@@ -21,28 +21,31 @@ class Question {
         
         filter.forEach(question => {
   
-        let ol = document.createElement("ol")
-        ol.innerHTML = `${question.description}`   
-        categoryQuestions.appendChild(ol)
+        let ul = document.createElement("ol")
+        let li = document.createElement("li") 
+        li.innerHTML = `${question.description}`   
+        categoryQuestions.appendChild(ul)
+        ul.appendChild(li) 
         
         let button1 = document.createElement("BUTTON") 
         button1.innerHTML = `${question.option}`
-        ol.appendChild(button1)
+        li.appendChild(button1)
         button1.addEventListener('click', function(e) {
            e.preventDefault() 
            resultContainer.innerHTML =  "Incorrect"
+           ul.remove("li")
         })
          
         let button2 = document.createElement("BUTTON") 
         button2.innerHTML = `${question.answer}`
-        ol.appendChild(button2)
+        li.appendChild(button2)
         button2.addEventListener('click', function(e) {
             e.preventDefault()
             resultContainer.innerHTML =  "Correct"
             score.innerHTML++;
             currentScore++
-        }) 
-       // user.score.push(score.innerHTML)    
+            ul.remove("li")
+        })     
       })
     }
 }
