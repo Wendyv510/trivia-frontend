@@ -5,7 +5,7 @@ const users = "https://localhost:3000/api/v1/users"
 let currentScore = 0 
 
 document.addEventListener('DOMContentLoaded', () => { 
-    getCategories(), getUsers()
+    getCategories(), getUsers(), getQuestions()
     
     const createNewUserForm = document.getElementById("new-user") 
 
@@ -63,7 +63,7 @@ function getCategories(){
 }
 
 
-function getQuestions(e) {
+function getQuestions() {
 
     fetch(questions) 
     .then(response => response.json()) 
@@ -73,7 +73,6 @@ function getQuestions(e) {
             let newQuestion = new Question(question, question.attributes)
             
         }
-        Question.renderQuestions(e);
     }) 
 }
 

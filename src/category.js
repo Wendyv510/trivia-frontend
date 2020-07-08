@@ -16,7 +16,7 @@ class Category {
           li.innerHTML = `${category.name}`
           ul.appendChild(li) 
           li.addEventListener('click', function(e) { 
-            getQuestions(e)
+            Question.renderQuestions(e);
           })    
         })         
       }  

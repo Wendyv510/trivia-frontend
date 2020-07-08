@@ -14,17 +14,19 @@ class Question {
         score.innerHTML = 0; 
         let  resultContainer = document.getElementById("correct-incorrect")
         let categoryQuestions = document.getElementById("category-questions") 
-        
+        categoryQuestions.innerHTML=""
         let filter = Question.all.filter(function(question) { 
             return question.category_id == parseInt(e.target.id) 
         })
         
+        
         filter.forEach(question => {
   
-        let ul = document.createElement("ol")
+        let ul = document.createElement("ul")
         let li = document.createElement("li")
         li.setAttribute("id", `${question.id}`); 
-        li.innerHTML = `${question.description}`   
+        li.innerHTML = `${question.description}`
+           
         categoryQuestions.appendChild(ul)
         ul.appendChild(li) 
         
