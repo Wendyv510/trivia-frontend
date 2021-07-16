@@ -117,8 +117,8 @@ img {
 }
 
 #correct-incorrect { 
-    color: red;
-    background-color: teal;
+    color: Red; 
+    background-color: yellow;
     margin-left: auto;
     margin-right: auto;
     text-align: center 

@@ -35,7 +35,7 @@ class Question {
         li.appendChild(button1)
         button1.addEventListener('click', function(e) {
            e.preventDefault() 
-           //resultContainer.innerHTML =  "Incorrect"
+           resultContainer.innerHTML =  "Incorrect"
            ul.remove("id")
         })
          
@@ -44,7 +44,7 @@ class Question {
         li.appendChild(button2)
         button2.addEventListener('click', function(e) {
             e.preventDefault()
-            //resultContainer.innerHTML =  "Correct"
+            resultContainer.innerHTML =  "Correct"
             score.innerHTML++;
             currentScore++
             ul.remove("id")
