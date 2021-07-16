@@ -2,6 +2,7 @@
 const categories = "https://localhost:3000/api/v1/categories"
 const questions = "https://localhost:3000/api/v1/questions"
 const users = "https://localhost:3000/api/v1/users"
+
 let currentScore = 0 
 
 document.addEventListener('DOMContentLoaded', () => { 

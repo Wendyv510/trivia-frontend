@@ -11,7 +11,7 @@ class Question {
     static renderQuestions(e) {
       
         let score = document.getElementById("scoreCard");
-        score.innerHTML = 0; 
+        score.innerHTML = currentScore; 
         let  resultContainer = document.getElementById("correct-incorrect")
         let categoryQuestions = document.getElementById("category-questions") 
         categoryQuestions.innerHTML=""
@@ -35,7 +35,7 @@ class Question {
         li.appendChild(button1)
         button1.addEventListener('click', function(e) {
            e.preventDefault() 
-           resultContainer.innerHTML =  "Incorrect"
+           //resultContainer.innerHTML =  "Incorrect"
            ul.remove("id")
         })
          
@@ -44,7 +44,7 @@ class Question {
         li.appendChild(button2)
         button2.addEventListener('click', function(e) {
             e.preventDefault()
-            resultContainer.innerHTML =  "Correct"
+            //resultContainer.innerHTML =  "Correct"
             score.innerHTML++;
             currentScore++
             ul.remove("id")
