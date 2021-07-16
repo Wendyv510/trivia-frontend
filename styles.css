@@ -17,7 +17,7 @@ img {
 }
 
 .quiz-wrapper{
-    height: 400px;
+    height: 600px;
     width: 600px;
     background-color: white;
     margin: 30px auto;
@@ -126,6 +126,6 @@ img {
 }
 
 #category-questions { 
-    color: white 
+    color: orange 
 }
 
