@@ -17,6 +17,7 @@ class Category {
           ul.appendChild(li) 
           li.addEventListener('click', function(e) { 
             Question.renderQuestions(e);
+            li.remove("id")
           })    
         })         
       }  
