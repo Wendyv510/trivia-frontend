@@ -1,6 +1,6 @@
 # Trivia - Frontend 
 
-
+Deploye with Netlify @ https://loving-curie-fa739e.netlify.app/
 
 Installation: To use the Trivia app, in terminal ... 
 -git clone https://github.com/Wendyv510/trivia-frontend.git 
